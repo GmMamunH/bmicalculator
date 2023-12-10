@@ -1,0 +1,107 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.container {
+  max-width: 500px;
+  margin: 1rem auto;
+
+}
+
+.heading {
+  text-align: center;
+  color: dodgerblue;
+}
+
+form {
+  margin-top: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 1rem 15px;
+  box-shadow: 3px 4px 5px #cdcdcd, -3px -4px 10px #cacaca;
+}
+
+label {
+  color: dodgerblue;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.4rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 0.4rem;
+  margin-block: 0.3rem 1rem;
+}
+
+input:focus {
+  outline: 3px solid dodgerblue;
+}
+
+input:first-of-type,
+input:last-child {
+  width: 100%;
+}
+
+.height-wrapper {
+  display: flex;
+  gap: 2px;
+}
+
+input[name='height'] {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+input[name='inch'] {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+input[type='submit'] {
+  background-color: dodgerblue;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+input[type='submit']:hover {
+  background-color: #026dd8;
+}
+
+#result {
+  color: #fff;
+  background-color: deeppink;
+  border-radius: 0.4rem;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  animation: anim 1s;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
